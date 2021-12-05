@@ -1,0 +1,9 @@
+/* NOTE: The instructions are in index.html */
+
+/* --- STEP (4) ---
+Style "blah" (and ONLY "blah") bold and red */
+span {
+    color: red;
+    font-weight: bold;
+  }
+  

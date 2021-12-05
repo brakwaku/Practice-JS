@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RegX</title>
+    <style>
+        .client-description {
+            width: 80%;
+            background-color: rgba(175, 175, 175, 0.411);
+            border-radius: 10px;
+            padding: 10px;
+            margin: auto;
+        }
+
+        .click-area {
+            padding: 10px;
+            width: 80%;
+            margin: auto;
+        }
+
+        #correct-answer {
+            padding: 10px;
+            width: 80%;
+            margin: auto;
+        }
+
+        body {
+            background-image: url('./rob-back.jpg');
+            background-size: cover;
+        }
+    </style>
+    <script src="confetti.js"></script>
+</head>
+
+<body>
+    <div class="client-description">
+        <h1 class="the-head">About me</h1>
+        <p class="the-body">Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae earum iure officiis enim
+            dignissimos, at veniam nesciunt, laudantium neque corporis nobis minima nam eaque expedita impedit eos?
+            Ipsam velit, quibusdam maxime ab earum ducimus fugit nulla repellendus nam totam debitis esse fuga! Soluta
+            est sapiente doloremque illum laudantium repudiandae incidunt blanditiis alias eligendi ratione distinctio
+            tempora neque velit, natus minima similique, nobis saepe, esse quod voluptate suscipit laborum magni
+            praesentium asperiores? Quod officiis maiores ipsa fugiat similique ut? Assumenda est ut nemo optio
+            quibusdam dolore quia neque hic. Ex eligendi, beatae, molestiae veritatis inventore quisquam, quasi
+            assumenda accusamus cupiditate adipisci expedita iusto perferendis provident culpa nesciunt. Quae ut natus
+            totam officiis ipsa quisquam delectus, iusto adipisci labore. Velit debitis corrupti esse, impedit
+            temporibus dolores ab non placeat soluta delectus sit fugiat omnis labore doloremque quia minus eius
+            quisquam, deserunt cumque nobis excepturi, culpa qui modi veritatis! Dolore exercitationem veniam possimus
+            hic quod velit consequuntur ipsum eius!</p>
+    </div>
+    <div id="correct-answer"></div>
+    <div class="click-area">
+        <label for="client-name">Is this you? Type your name here if you think this is you.</label><br>
+        <!-- <input id="client-name" name="client-name" type="text" onkeyup="checkName()"> -->
+        <input id="client-name" name="client-name" type="text" placeholder="First name Last name">
+        <input id="actual-name" name="actual-name" type="hidden" value="Rob Glance">
+        <button type="button" onclick="checkName()">Check</button>
+    </div>
+</body>
+
+</html>

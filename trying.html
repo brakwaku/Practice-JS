@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Try Me</title> 
+	<meta charset="utf-8"> 
+    <title> Try me </title>
+    <style>
+        span:hover {
+            cursor: pointer;
+        }
+    </style>
+    <script>
+        function printOut() {
+            let userArray = document.getElementById('arrayString').value;
+            userArray.split(',');
+            console.log(userArray);
+            userArray.forEach(element => {
+                parseInt(element);
+                document.getElementsByTagName('p')[0].append(element + ',');
+            });
+
+            document.getElementsByTagName('p')[0].append(userArray[1])
+        }
+    </script>
+</head>
+
+<body style="text-align: center;">
+	<h1 style="color: green;"> 
+		User Array Inputs
+	</h1> 
+
+	<h3 id="po">Please enter a number</h3> 
+    <p>Click "+" to add more numbers</label><br>
+	<form class="" action="index.html" method="post">
+		<input type="text" name="array" value="" /><span onclick="addInput()"> +</span><br>
+	</form> 
+    <button type="submit" name="button" onclick="multiply()"> 
+        Submit 
+    </button> 
+	<br> 
+
+    <p id="par"></p><br><hr>
+    
+    <input id="toBeReversed" type="text" name="array" value="" />
+    <button onclick="reverseMe()">Reverse</button>
+
+    <p id="reversed"></p>
+    <!-- <label for="userArray">Please enter commo separated values</label>
+    <input type="text" id="arrayString" name="userArray" placeholder="2,3,4,5,6,7,8...">
+    <button type="button" onclick="printOut()">Submit</button><br>
+    <p></p> -->
+</body>
+<script type="text/javascript"> 
+		let k = "3 x your inputs are : "; 
+		function multiply() {
+            event.preventDefault();
+			let input = document.getElementsByName('array'); 
+
+			for (let i = 0; i < input.length; i++) { 
+				let a = input[i];
+
+				k = k + (parseInt(a.value)) * 3 + ", "; 
+			} 
+
+			document.getElementById("par").innerHTML = k; 
+			document.getElementById("po").innerHTML = "Output";
+            input.value = '';
+		} 
+
+        function addInput() {
+            let newInput = document.createElement('input');
+            newInput.type = 'text';
+            newInput.name = 'array';
+
+            let form = document.getElementsByTagName('form')[0];
+            form.appendChild(newInput);
+            form.appendChild(document.createElement('br'));
+        }
+
+
+        function reverseMe() {
+            let toBeReversed = document.getElementById('toBeReversed').value;
+            toBeReversed.split('');
+            console.log(toBeReversed);
+            let theNew = toBeReversed.reverse().join('');
+
+            document.getElementById('reversed').innerHTML = toBeReversed;
+        }
+	</script> 
+</html>
